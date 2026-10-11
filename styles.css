@@ -1,0 +1,191 @@
+:root {
+  --bg: #f6f2e9;
+  --paper: #fffdf8;
+  --ink: #2f2a24;
+  --muted: #6f675e;
+  --line: #ded7cb;
+  --accent: #8a6a3f;
+  --shadow: 0 18px 45px rgba(72, 58, 38, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(196, 164, 111, 0.10), transparent 34rem),
+    var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP",
+               "Segoe UI", sans-serif;
+  line-height: 1.75;
+}
+
+main {
+  width: min(860px, calc(100% - 32px));
+  margin: 48px auto;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: clamp(24px, 5vw, 52px);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+}
+
+h2 {
+  margin-top: 2.2rem;
+  font-size: 1.35rem;
+}
+
+p, li { font-size: 1rem; }
+
+.lead {
+  margin: 0 0 30px;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0 6px;
+}
+
+a {
+  color: #6b4f2c;
+  text-underline-offset: 3px;
+}
+
+nav a, .button {
+  display: inline-block;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.65);
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.note {
+  margin-top: 28px;
+  padding: 16px 18px;
+  border-left: 4px solid var(--accent);
+  background: rgba(138, 106, 63, .06);
+  border-radius: 0 10px 10px 0;
+}
+
+small, footer {
+  color: var(--muted);
+}
+
+footer {
+  width: min(860px, calc(100% - 32px));
+  margin: -24px auto 48px;
+  padding: 0 8px;
+  font-size: .88rem;
+}
+/* Shared site: one policy, a section per app. */
+.toc { margin: 8px 0 0; padding-left: 1.2em; }
+
+.app {
+  margin-top: 2.6rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 24px;
+}
+
+.app h2 { margin-top: 0; }
+
+.app .eyebrow { margin-bottom: 2px; }
+
+.apps {
+  display: grid;
+  gap: 14px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.apps li {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255,255,255,.55);
+}
+
+.apps h3 { margin: 0 0 4px; font-size: 1.1rem; }
+
+.apps p { margin: 0 0 10px; color: var(--muted); }
+
+.apps nav { margin: 0; }
+
+/* App guide pages */
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin: 18px 0 6px;
+}
+
+.shots figure { margin: 0; }
+
+.shots img, .wide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #0b0f14;
+}
+
+.shots figcaption, .wide figcaption {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: .88rem;
+  text-align: center;
+}
+
+.wide { margin: 18px 0 6px; }
+
+.keys {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+
+.keys th, .keys td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.keys th { white-space: nowrap; color: var(--accent); font-weight: 700; }
+
+dl.faq dt { margin-top: 1.1rem; font-weight: 700; }
+
+dl.faq dd { margin: 4px 0 0; }
