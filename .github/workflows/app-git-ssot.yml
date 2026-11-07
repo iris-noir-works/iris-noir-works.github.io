@@ -1,0 +1,17 @@
+name: App Git SSOT
+on:
+  push:
+  pull_request:
+  merge_group:
+permissions:
+  contents: read
+jobs:
+  app-git-ssot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check complete reachable history
+        run: python3 .repo-policy/check.py --history HEAD
