@@ -1,0 +1,32 @@
+# BEGIN app-development-git-ssot
+**/docs/verification/
+**/evidence/
+**/Evidence/
+**/DerivedData/
+**/build/
+**/.build/
+*.xcresult/
+*.log
+.cache/
+__pycache__/
+.env
+.env.*
+*.env
+!.env.example
+!.env.template
+!.env.sample
+!.env.*.example
+!.env.*.template
+!.env.*.sample
+!*.env.example
+!*.env.template
+!*.env.sample
+*.p12
+*.pfx
+*.mobileprovision
+*.p8
+*.pem
+*.key
+*.cer
+*.crt
+# END app-development-git-ssot
